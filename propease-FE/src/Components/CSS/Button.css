@@ -1,0 +1,15 @@
+.custom-button {
+    background-color: #E55642; 
+    color: #000000; 
+    padding: 10px 20px;
+    border: 5px solid #E55642;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+  }
+  
+  .custom-button.hovered {
+    background-color: rgb(23, 23, 24);
+    color: #E55642;
+    border-color: #E55642;
+  }

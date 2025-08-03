@@ -1,0 +1,27 @@
+.Ln-image{
+    height: 753px;
+    width: 554px;
+    top: 160px;
+    right: 120px;
+    position: absolute;
+}
+
+.Ln-heading{    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+    color: #E55642;
+    position: absolute;
+    top: 300px;
+    left: 150px;
+}
+
+.Ln-subt{    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #ffffff;
+    position: absolute;
+    top: 410px;
+    left: 156px;
+}

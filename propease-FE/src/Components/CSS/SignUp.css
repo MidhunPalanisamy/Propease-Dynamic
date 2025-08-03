@@ -1,0 +1,140 @@
+.Logo_Cont {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.SignUp-Container{
+    background-color: #333333;
+    padding: 30px;
+    width: 500px;
+    height: 550px;
+    border-radius: 29px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.t2{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    position: relative;
+    top: 25px;
+}
+
+.sp-input{
+    background-color: #181819;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 6px;
+    width: 426px;
+    height: 50px;
+    border:none;
+    outline:none;
+    color: #ffffff;
+    position: relative;
+    top: 60px;
+    appearance: none;
+}
+
+.sp-txt{
+    font-family: 'Montserrat', sans-serif;
+    color: #918f8f;
+    position: absolute;
+    bottom: 80px;
+    left: 45px;
+}
+
+.gender-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    position: absolute;
+    top: 235px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+  
+  .gender-title {
+    font-weight: normal;
+    color: #ffffff;
+    font-size: large;
+    position: relative;
+    bottom: 4px;
+  }
+  
+  .gender-option {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+    font-weight: 500;
+  }
+  
+  .gender-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkmk {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #1f1f1f;
+    border: 2px solid #e15b4f;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    box-shadow: 0 0 6px #e15b4f88;
+  
+    display: flex;               /* 👈 Enable flexbox */
+    align-items: center;         /* 👈 Center vertically */
+    justify-content: center;     /* 👈 Center horizontally */
+  }
+  
+  
+  .gender-option input:checked ~ .checkmk {
+    background-color: #e15b4f;
+    box-shadow: 0 0 10px #e15b4f;
+  }
+  
+  .checkmk::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: none;
+}
+
+.gender-option input:checked ~ .checkmk::after {
+  display: block;
+}
+
+  
+  .gender-option input:checked ~ .checkmk::after {
+    display: block;
+  }
+  
+  .gender-option .checkmk::after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ffffff;
+  }
+  

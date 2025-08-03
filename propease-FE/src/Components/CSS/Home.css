@@ -1,0 +1,35 @@
+.home-txt1{
+    color: azure;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.home-txt2{
+    color: azure; 
+    position: absolute;
+    top:43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.home-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 2;
+}
+.hmImg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 960px;
+    z-index: 1;
+}

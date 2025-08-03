@@ -1,0 +1,64 @@
+.addprop-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 70px;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, #ff7e5f, #feb47b, #ff7e5f);    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.addprop-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #151516 0%, #333333 100%);
+}
+
+.addprop-container {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.addprop-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.addprop-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.addprop-input:focus {
+    outline: none;
+    border-color: #ff7e5f;
+    box-shadow: 0 0 5px rgba(255, 126, 95, 0.5);
+}
+
+.addprop-button {
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: white;
+    background-color: #ff7e5f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
