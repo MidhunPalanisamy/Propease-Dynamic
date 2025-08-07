@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Landing from "./Components/Landing";
 import Login from "./Components/Login";
@@ -12,18 +12,16 @@ import Community from "./Components/Community";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/home" element={<Home />}/>
-        <Route path="/map" element={<Map />} />
-        <Route path="/property" element={<Property />} />
-        <Route path="/addprop" element={<AddProp />} />
-        <Route path="/community" element={<Community />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/map" element={<Map />} />
+      <Route path="/property" element={<Property />} />
+      <Route path="/addprop" element={<AddProp />} />
+      <Route path="/community" element={<Community />} />
+    </Routes>
   );
 }
 
