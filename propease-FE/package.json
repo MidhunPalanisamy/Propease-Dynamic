@@ -2,7 +2,7 @@
   "name": "propease",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/Propease-Dynamic/",
+  "homepage": "https://midhunalanjsamy.github.io/Propease-Dynamic",
   "dependencies": {
     "@stomp/stompjs": "^7.1.1",
     "@testing-library/dom": "^10.4.0",
