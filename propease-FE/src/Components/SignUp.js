@@ -87,7 +87,7 @@ const SignUp = () => {
                         <input className="sp-input" type='email' name='ml' placeholder='Mail' required /><br /><br />
                         <input className="sp-input" type='password' name='pwd' placeholder='Password' required />
                     </center>
-                    <p className='sp-txt'>Already have an account? <a style={{ color: "#E55642", textDecoration: "none" }} href="/login">Login</a></p>
+                    <p className='sp-txt'>Already have an account? <a style={{ color: "#E55642", textDecoration: "none" }} href="/#/login">Login</a></p>
                     <button className='sub-button' type="submit">
                         <Button text="Go" />
                     </button>
