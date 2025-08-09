@@ -121,7 +121,7 @@ const AddProp = () => {
                 </form>
             </div>
             <br />
-            <a href="/property" style={{ textDecoration: "none", color: "#ff7e5f" }}>
+            <a href="/#/property" style={{ textDecoration: "none", color: "#ff7e5f" }}>
                 Go Back
             </a>
         </div>
