@@ -48,7 +48,7 @@ const Login = () => {
                         <input className='input-Fields' type='email' name='mID' placeholder='Mail ID' required /><br /><br /><br />
                         <input className='input-Fields' type='password' name='pwd' placeholder='Password' required />
                     </center>
-                    <p className='dha'> Don't have an account?<a href='/signup' style={{ color: "#E55642", textDecoration: "none" }}>SignUp</a></p>
+                    <p className='dha'> Don't have an account?<a href='/#/signup' style={{ color: "#E55642", textDecoration: "none" }}>SignUp</a></p>
                     <button className='sub-button' type="submit">
                         <Button text="Go" />
                     </button>
