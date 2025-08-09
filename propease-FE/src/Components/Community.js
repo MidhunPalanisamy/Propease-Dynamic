@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 // import SockJS from 'sockjs-client';
 // import { Client } from '@stomp/stompjs';
-// import MainNavBar from './MainNavBar';
+import MainNavBar from './MainNavBar';
 
 // const Community = ({ username }) => {
 //   const [messages, setMessages] = useState([]);
@@ -77,11 +77,11 @@ const Community = () => {
       justifyContent: "center",
       alignItems: "center",
       height: "100vh",
-      backgroundColor: "black",
       color: "orange",
       fontSize: "1.5rem",
       fontWeight: "bold"
     }}>
+      <MainNavBar />
       <h1>This Page is currently unavailable</h1>
     </div>
   );
