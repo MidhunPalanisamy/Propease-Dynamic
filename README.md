@@ -165,4 +165,5 @@ Submit a pull request
 This project is open-source and available under the MIT License.
 
 🙌 Acknowledgements
-Built with by Midhun Palanisamy and contributors.
+Built with by Midhun Palanisamy
+
