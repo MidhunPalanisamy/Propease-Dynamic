@@ -1,0 +1,9 @@
+.glow-text{
+    color: rgb(255, 255, 255);
+    transition: 100ms;
+}
+.glow-text.hovered{
+    color: #E55642;
+    transition: 100ms;
+    font-size: large;
+}
