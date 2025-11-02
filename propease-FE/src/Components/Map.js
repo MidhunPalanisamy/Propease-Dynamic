@@ -6,7 +6,6 @@ import Button from './Button';
 import L from 'leaflet';
 import icon from '../Assets/marker.png';
 import Shadow from 'leaflet/dist/images/marker-shadow.png';
-import MainNavBar from "./MainNavBar";
 import axios from 'axios';
 
 delete L.Icon.Default.prototype._getIconUrl;
@@ -53,7 +52,6 @@ const Map = () => {
 
   return (
     <div>
-      <MainNavBar />
       <div className="search-bar">
         <input
           className="search-input"

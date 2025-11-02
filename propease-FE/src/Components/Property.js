@@ -3,7 +3,7 @@ import Build from "../Assets/Build.png";
 import "./CSS/Property.css";
 import add from "../Assets/add.png";
 import { Link } from "react-router-dom";
-import MainNavBar from "./MainNavBar";
+
 
 const Property = () => {
     const [property, setProperty] = useState([]);
@@ -20,7 +20,6 @@ const Property = () => {
 
     return (
         <div>
-            <MainNavBar/>
             <h1 className="prop-txt">Find Your Space</h1>
             <div className="property-container">
                 {property.map((prop) => (

@@ -1,15 +1,17 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './CSS/GlowText.css';
 
-const GlowText = ({text})=>{
+const GlowText = ({ text, active = false }) => {
     const [textHovered, setTextHovered] = useState(false);
     return (
         <div>
-            <text 
-            className={`glow-text ${textHovered ? 'hovered':''}`}
-            onMouseEnter={()=>setTextHovered(true)}
-            onMouseLeave={()=>setTextHovered(false)}
-            >{text}</text>
+            <span
+                className={`glow-text ${textHovered ? 'hovered' : ''} ${active ? 'active' : ''}`}
+                onMouseEnter={() => setTextHovered(true)}
+                onMouseLeave={() => setTextHovered(false)}
+            >
+                {text}
+            </span>
         </div>
     );
 }

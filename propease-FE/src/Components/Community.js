@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SockJS from 'sockjs-client';
 import { Client } from '@stomp/stompjs';
-import MainNavBar from './MainNavBar';
 
 const Community = ({ username }) => {
   const [messages, setMessages] = useState([]);
@@ -46,7 +45,6 @@ const Community = ({ username }) => {
 
   return (
     <div style={{ padding: '20px', maxWidth: '600px', margin: 'auto' }}>
-        <MainNavBar />
       <h2>Community Chat</h2>
       <div style={{ border: '1px solid #ccc', padding: '10px', height: '300px', overflowY: 'auto' }}>
         {messages.map((msg, index) => (
