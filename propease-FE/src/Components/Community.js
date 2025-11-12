@@ -1,69 +1,62 @@
-import React, { useState, useEffect, useRef } from 'react';
-import SockJS from 'sockjs-client';
-import { Client } from '@stomp/stompjs';
+import React, { useState } from 'react';
+import './CSS/Community.css';
+import send from '../Assets/send.png';
 
-const Community = ({ username }) => {
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
-  const stompClient = useRef(null);
-  const messagesEndRef = useRef(null);
+const Community = ({ username = "User" }) => {
+  const [messages, setMessages] = useState([
+    { id: 1, text: "Hello everyone!", username: "John", isCurrentUser: false },
+    { id: 2, text: "Hi there!", username: "User", isCurrentUser: true },
+    { id: 3, text: "How are you all?", username: "Sarah", isCurrentUser: false },
+  ]);
 
-  useEffect(() => {
-    const socket = new SockJS('http://localhost:8080/ws');
-    stompClient.current = new Client({
-      webSocketFactory: () => socket,
-      onConnect: () => {
-        stompClient.current.subscribe('/topic/messages', (message) => {
-          const received = JSON.parse(message.body);
-          setMessages((prev) => [...prev, received]);
-        });
-      },
-    });
+  const [newMessage, setNewMessage] = useState('');
 
-    stompClient.current.activate();
-
-    return () => {
-      if (stompClient.current) {
-        stompClient.current.deactivate();
-      }
-    };
-  }, []);
-
-  const sendMessage = () => {
-    if (input.trim() === '') return;
-    const message = { username, content: input };
-    stompClient.current.publish({
-      destination: '/app/chat',
-      body: JSON.stringify(message),
-    });
-    setInput('');
+  const handleSendMessage = () => {
+    if (newMessage.trim()) {
+      const message = {
+        id: Date.now(),
+        text: newMessage,
+        username: username,
+        isCurrentUser: true
+      };
+      setMessages([...messages, message]);
+      setNewMessage('');
+    }
   };
 
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleSendMessage();
+    }
+  };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '600px', margin: 'auto' }}>
-      <h2>Community Chat</h2>
-      <div style={{ border: '1px solid #ccc', padding: '10px', height: '300px', overflowY: 'auto' }}>
-        {messages.map((msg, index) => (
-          <div key={index} style={{ margin: '10px 0' }}>
-            <strong>{msg.username}:</strong> {msg.content}
+    <div>
+      <h1 className="community-title">Community Page</h1>
+      
+      <div className="messages-container">
+        {messages.map((message) => (
+          <div
+            key={message.id}
+            className={`message ${message.isCurrentUser ? 'user-message' : 'other-message'}`}
+          >
+            <span className="message-username">{message.username}</span>
+            <div className="message-content">{message.text}</div>
           </div>
         ))}
-        <div ref={messagesEndRef} />
       </div>
-      <div style={{ marginTop: '10px' }}>
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Type your message"
-          style={{ width: '80%', padding: '8px' }}
-        />
-        <button onClick={sendMessage} style={{ padding: '8px 12px' }}>Send</button>
-      </div>
+
+      <input 
+        className="community-input" 
+        type="text" 
+        placeholder="Type your message here..." 
+        value={newMessage}
+        onChange={(e) => setNewMessage(e.target.value)}
+        onKeyPress={handleKeyPress}
+      />
+      <button className="community-button" onClick={handleSendMessage}>
+        <img style={{ width: '50px', height: '50px' }} src={send} alt="Send" />
+      </button>
     </div>
   );
 };
