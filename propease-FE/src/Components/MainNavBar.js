@@ -36,11 +36,11 @@ const MainNavBar = () => {
                         <GlowText text="Community" active={isActive('/community')} />
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link to="/profile"> 
                         <GlowText text="Profile" active={isActive('/profile')} />
                     </Link>
-                </li>
+                </li> */}
             </ul>
         </nav>
     );
