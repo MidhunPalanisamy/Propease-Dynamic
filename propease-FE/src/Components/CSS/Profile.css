@@ -1,32 +1,132 @@
-.profile-tittle{
+/* Title Styling */
+.profile-title {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 55px;
     text-align: center;
-    position: absolute;
-    top: 250px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(to right, #ff7e5f, #feb47b, #ff7e5f);    
+    margin-top: 150px;
+
+    background: linear-gradient(to right, #ff7e5f, #feb47b, #ff7e5f);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.profile-details{
+.h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+
+    background: linear-gradient(to right, #ff7e5f, #feb47b, #ff7e5f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* Main Profile Box */
+.profile-card {
     background-color: #333333;
-    padding: 30px;
-    width: 500px;
-    height: 265px;
-    border-radius: 29px;
+    padding: 40px 45px;
+    width: 600px;
+    min-height: 320px;
+    border-radius: 30px;
+
+    display: flex;
+    gap: 30px;
+
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
-.prf-dt{
+
+/* Profile Image Styling */
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #ff7e5f;
+    object-fit: cover;
+}
+
+/* Profile Details Section */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-info p {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 25px;
+    font-size: 22px;
     color: #ff7e5f;
-    margin-bottom: 20px;
+    margin: 10px 0;
+}
+
+/* Buttons Section */
+.profile-actions {
+    text-align: center;
+    margin-top: 550px;  /* ensures buttons are below the box */
+}
+
+.edit-btn,
+.logout-btn {
+    padding: 12px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    margin: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* Individual Buttons */
+.edit-btn {
+    background-color: #ff7e5f;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #e66c50;
+}
+
+.logout-btn {
+    background-color: #feb47b;
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: #e59f63;
+}
+
+/* Loading & Error Styles */
+.loading, .error {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #ff7e5f;
+    font-size: 28px;
+    margin-top: 250px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-card {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        top: 50%;
+    }
+
+    .profile-actions {
+        margin-top: 650px;
+    }
+
+    .profile-info p {
+        text-align: center;
+    }
 }

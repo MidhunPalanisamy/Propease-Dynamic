@@ -11,6 +11,7 @@ import AddProp from "./Components/AddProp";
 import Community from "./Components/Community";
 import Profile from "./Components/Profile";
 import MainNavBar from "./Components/MainNavBar";
+import UserRegistration from "./Components/UserRegistration"
 
 function Layout() {
   const location = useLocation();
@@ -30,6 +31,8 @@ function Layout() {
         <Route path="/addprop" element={<AddProp />} />
         <Route path="/community" element={<Community />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/UserRegistration" element={<UserRegistration />} />
+
       </Routes>
     </>
   );
