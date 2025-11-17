@@ -10,8 +10,13 @@ const Login = () => {
     const handleLogin = async (event) => {
         event.preventDefault();
 
-        const email = event.target.mID.value;
-        const password = event.target.pwd.value;
+        const email = event.target.mID.value.trim();
+        const password = event.target.pwd.value.trim();
+
+        if (!email || !password) {
+            alert('Please enter both email and password');
+            return;
+        }
 
         try {
             const response = await fetch('http://localhost:8080/api/auth/login', {
@@ -22,19 +27,27 @@ const Login = () => {
                 body: JSON.stringify({ email, password })
             });
 
-            const data = await response.text();
-            if (data === 'Login Successful') {
-                console.log('Login successful');
+            const data = await response.json();
+            
+            console.log('Response status:', response.status);
+            console.log('Response data:', data);
+
+            if (response.ok && data.userId) {
+                // Store userId in localStorage
+                localStorage.setItem('userId', data.userId);
+                localStorage.setItem('email', email);
+                console.log('Login successful, userId:', data.userId);
+                alert('Login successful!');
                 navigate('/home');
             } else {
-                alert('Invalid email or password');
+                console.error('Login failed:', data.message);
+                alert(data.message || 'Invalid email or password');
             }
         } catch (error) {
             console.error('Login error:', error);
             alert('An error occurred. Please try again later.');
         }
     };
-
 
     return (
         <div className='login-Page'>
@@ -45,8 +58,20 @@ const Login = () => {
                 <form onSubmit={handleLogin}>
                     <center>
                         <h1 className='t1'>LOGIN</h1>
-                        <input className='input-Fields' type='email' name='mID' placeholder='Mail ID' required /><br /><br /><br />
-                        <input className='input-Fields' type='password' name='pwd' placeholder='Password' required />
+                        <input 
+                            className='input-Fields' 
+                            type='email' 
+                            name='mID' 
+                            placeholder='Mail ID' 
+                            required 
+                        /><br /><br /><br />
+                        <input 
+                            className='input-Fields' 
+                            type='password' 
+                            name='pwd' 
+                            placeholder='Password' 
+                            required 
+                        />
                     </center>
                     <p className='dha'> Don't have an account?<a href='/signup' style={{ color: "#E55642", textDecoration: "none" }}>SignUp</a></p>
                     <button className='sub-button' type="submit">

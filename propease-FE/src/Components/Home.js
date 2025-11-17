@@ -6,19 +6,19 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
-        <div>
+        <div className="home-container">
             <h1 className="home-txt1">Welcome to Propease</h1>
             <p className="home-txt2">The search is over. Find your dreams here</p>
 
-            {/* Existing Property Button */}
-            <Link to="/property" className="home-btn">
-                <Button text="Go" />
-            </Link>
-
-            {/* NEW User Registration Button */}
-            <Link to="/UserRegistration" className="home-btn user-reg-btn">
-                <Button text="Register as User" />
-            </Link>
+            {/* Navigation Buttons */}
+            <div className="home-nav-buttons">
+                <Link to="/property" className="home-btn">
+                    <Button text="🏘️ Explore Properties" />
+                </Link>
+                <Link to="/owned" className="home-btn">
+                    <Button text="🔑 My Properties" />
+                </Link>
+            </div>
 
             <img className="hmImg" src={homeImage} alt="Home" />
         </div>

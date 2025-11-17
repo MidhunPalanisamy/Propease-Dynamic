@@ -9,7 +9,6 @@ import java.util.Optional;
 
 @Service
 public class AuthService {
-
     @Autowired
     private UserRepository userRepository;
 
@@ -17,8 +16,17 @@ public class AuthService {
         return userRepository.save(user);
     }
 
-    public boolean authenticate(String email, String password) {
+    public User authenticate(String email, String password) {
         Optional<User> user = userRepository.findByEmail(email);
-        return user.isPresent() && user.get().getPassword().equals(password);
+
+        if (user.isPresent()) {
+            User foundUser = user.get();
+            // Compare passwords (trim whitespace and case-sensitive)
+            if (foundUser.getPassword() != null &&
+                foundUser.getPassword().trim().equals(password.trim())) {
+                return foundUser;
+            }
+        }
+        return null;
     }
 }

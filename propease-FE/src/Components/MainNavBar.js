@@ -27,6 +27,11 @@ const MainNavBar = () => {
                     </Link>
                 </li>
                 <li>
+                    <Link to="/owned"> 
+                        <GlowText text="Owned" active={isActive('/owned')} />
+                    </Link>
+                </li>
+                <li>
                     <Link to="/map">
                         <GlowText text="Map" active={isActive('/map')} />
                     </Link>
@@ -36,11 +41,6 @@ const MainNavBar = () => {
                         <GlowText text="Community" active={isActive('/community')} />
                     </Link>
                 </li>
-                {/* <li>
-                    <Link to="/profile"> 
-                        <GlowText text="Profile" active={isActive('/profile')} />
-                    </Link>
-                </li> */}
             </ul>
         </nav>
     );
