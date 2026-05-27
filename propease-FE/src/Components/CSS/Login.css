@@ -1,0 +1,61 @@
+.Logo_Cont {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.login-Container{
+    background-color: #333333;
+    padding: 30px;
+    width: 500px;
+    height: 550px;
+    border-radius: 29px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input-Fields{
+    background-color: #181819;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 6px;
+    width: 426px;
+    height: 50px;
+    border:none;
+    outline:none;
+    color: #ffffff;
+    position: relative;
+    top: 120px;
+}
+
+.t1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    position: relative;
+    top: 50px;
+  }
+
+.sub-button {
+    position: absolute;
+    bottom: 30px;
+    right: 45px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.dha{
+    font-family: 'Montserrat', sans-serif;
+    color: #918f8f;
+    position: absolute;
+    bottom: 140px;
+    left: 45px;
+}

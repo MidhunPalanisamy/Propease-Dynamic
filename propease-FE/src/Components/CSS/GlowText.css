@@ -1,0 +1,14 @@
+.glow-text {
+    color: rgb(255, 255, 255);
+    transition: color 220ms ease, transform 220ms ease;
+    display: inline-block;
+}
+
+/* Hover and active only change color (no glow) */
+.glow-text.hovered,
+.glow-text.active {
+    color: #E55642;
+    transform: translateY(-1px);
+    text-shadow: none;
+    filter: none;
+}

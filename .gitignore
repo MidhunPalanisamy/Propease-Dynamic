@@ -1,0 +1,80 @@
+# Environment files
+.env
+.env.*
+!.env.example
+!**/.env.example
+.envrc
+*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+runtime/
+logs/
+
+# Generated secrets and local credentials
+secrets/
+*.key
+*.pem
+*.p12
+*.jks
+*.keystore
+*.secret
+*.token
+
+# Local config overrides
+application-local.properties
+application-local.yml
+application-*.local.properties
+application-*.local.yml
+
+# Frontend dependencies and build output
+node_modules/
+propease-FE/node_modules/
+propease-FE/.pnp
+propease-FE/.pnp.js
+propease-FE/coverage/
+propease-FE/build/
+
+# Backend build output
+target/
+Propease-BE/target/
+!Propease-BE/.mvn/wrapper/maven-wrapper.jar
+!Propease-BE/**/src/main/**/target/
+!Propease-BE/**/src/test/**/target/
+
+# Build directories
+build/
+Propease-BE/build/
+!Propease-BE/**/src/main/**/build/
+!Propease-BE/**/src/test/**/build/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.iws
+*.iml
+*.ipr
+.classpath
+.project
+.settings/
+
+# Spring Tool Suite
+.apt_generated/
+.factorypath
+.springBeans
+.sts4-cache/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
