@@ -94,7 +94,7 @@ The backend relies on the following key properties (`application.properties`):
 | --- | --- | --- |
 | `spring.datasource.url` | MySQL connection string | `jdbc:mysql://localhost:3306/propease_db` |
 | `spring.datasource.username` | MySQL username | `root` |
-| `spring.datasource.password` | MySQL password | `Pass@32997` |
+| `spring.datasource.password` | MySQL password | `your_password` |
 | `spring.jpa.hibernate.ddl-auto` | DB schema management | `update` |
 | `spring.servlet.multipart.*` | File upload limits | `10MB` |
 
